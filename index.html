@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+//     let anwer =[
+//           {name: 'Ayush', class: 12, RollNo : 1 },
+//           {name: 'Prateek', class: 12, RollNo : 2 },
+//           {name: 'Piyush', class: 12, RollNo : 3 },
+//           {name: 'Aman', class: 12, RollNo : 4 },
+//           {name: 'Suraj', class: 12, RollNo : 5 },
+//           {name: 'Yash', class: 12, RollNo : 6 }
+// ] 
+// let answer = studentRecords.filter((a)=>a.id>120)
+// let one = answer[0].marks;
+// let two = answer[1].marks;
+// console.log(one + two)
+
+// function object(Name,Class,RollNo){
+//     this.Name = Name;
+//     this.Class = Class;
+//     this.RollNo = RollNo;
+// }
+
+// newObject1 = new object("Ayush",12 + 'th',1)
+// newObject2 = new object("Prateek",12 + 'th',2)
+// newObject3 = new object("Suraj",12 + 'th',3)
+// newObject4 = new object("Piyush",12 + 'th',4)
+// newObject5 = new object("Aman",12 + 'th',5)
+// newObject6 = new object("Ankit",12 + 'th',6)
+
+// let empty = []
+// empty.push(newObject1,newObject2,newObject3,newObject4,newObject5,newObject6)
+// console.log(empty)
+
+</script>
+<body>
+    <p>
+        "let studentRecords = [ {name: 'John', id: 123, marks : 98 }, <br>
+          {name: 'Baba', id: 101, marks : 23 }, <br>
+          {name: 'yaga', id: 200, marks : 45 },<br>
+          {name: 'Wick', id: 115, marks : 75 } ] "
+    </p> <hr>
+    <ol>
+        <li>
+            We are interested in retrieving only the students' names; all the names should be in caps.
+            <pre>
+                let answer = studentRecords.map((a)=>a.name.toUpperCase())
+                console.log(answer)
+            </pre>
+        </li> <hr>
+
+        <li>
+            "Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+            [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"
+            <pre>
+                let answer = studentRecords.filter((a)=>a.marks > 50)
+                console.log(answer)
+            </pre>
+        </li> <hr>
+
+        <li>
+            Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.
+            <pre>
+                let answer = studentRecords.filter((a)=>a.marks>50 & a.id >120)
+            </pre>
+        </li> <hr>
+
+        <li>
+            Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.
+            <pre>let zero = studentRecords[0].marks;
+                let one = studentRecords[1].marks;
+                let two = studentRecords[2].marks;
+                let three = studentRecords[3].marks;
+                let answer = zero + one + two + three;
+                console.log(answer)</pre>
+        </li> <hr>
+
+        <li>
+            This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.
+            <pre>
+                let answer = studentRecords.filter((a)=>a.marks > 50)
+                console.log(answer)
+            </pre>
+        </li> <hr>
+
+        <li>
+            This time we are required to print the sum of marks of the students with id > 120.
+            <pre>let answer = studentRecords.filter((a)=>a.id>120)
+                let one = answer[0].marks;
+                let two = answer[1].marks;
+                console.log(one + two)</pre>
+        </li> <hr>
+
+        <li>
+            This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.
+            <pre>let above50 = studentRecords.filter((s)=>s.marks>50)
+                let one = above50[0].marks; above50[1].marks;
+                let answer = studentRecords.filter((a)=>a.marks < 50)
+                let three = answer[0].marks + 15;
+                let four = answer[1].marks + 15;
+                console.log(one + four)</pre>
+        </li> <hr>
+
+        <li>
+            Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. 
+            <pre>function object(Name,Class,RollNo){
+                this.Name = Name;
+                this.Class = Class;
+                this.RollNo = RollNo;
+            }
+            
+            newObject1 = new object("Ayush",12 + 'th',1)
+            newObject2 = new object("Prateek",12 + 'th',2)
+            newObject3 = new object("Suraj",12 + 'th',3)
+            newObject4 = new object("Piyush",12 + 'th',4)
+            newObject5 = new object("Aman",12 + 'th',5)
+            newObject6 = new object("Ankit",12 + 'th',6)
+            
+            let empty = []
+            empty.push(newObject1,newObject2,newObject3,newObject4,newObject5,newObject6)
+            console.log(empty)</pre>
+        </li>
+    </ol>
+</body>
+</html>
